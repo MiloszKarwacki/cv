@@ -1,0 +1,64 @@
+@use '../abstaract'as *;
+
+.hero {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @include big-tablet {
+        padding: 50px 0;
+    }
+
+
+    &__photo {
+        max-width: 400px;
+        width: 100%;
+
+        @include smartphone {
+            max-width: none;
+            width: 80%;
+        }
+    }
+
+    &__photoImg {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
+        border: 18px solid #444;
+    }
+
+    &__data {
+        max-width: 600px;
+        width: 100%;
+
+        @include big-tablet {
+            max-width: none;
+            padding: 0 $gutterGap;
+        }
+
+    }
+
+    &__dataRole {
+        margin: 0 0 10px 0;
+    }
+
+    &__dataName {
+        margin: 0 0 20px 0;
+        @include fluid-type(24px, 52px);
+    }
+
+    &__dataDesc {
+        line-height: 1.8;
+        margin: 0 0 20px 0;
+    }
+
+    &__dataButtons {
+        display: flex;
+        gap: 10px;
+    }
+}

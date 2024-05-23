@@ -1,0 +1,16 @@
+@use '../abstaract'as *;
+
+.light-button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 2px solid $thirdColor;
+    background-color: $factsBgColor;
+    color: $thirdColor;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78);
+    transition: 300ms;
+
+    &:hover {
+        background-color: $thirdColor;
+        color: $factsBgColor;
+    }
+}

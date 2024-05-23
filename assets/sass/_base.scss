@@ -1,0 +1,26 @@
+@use 'abstaract'as *;
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    color: $mainColor;
+    background-color: $bodyBgColor;
+    font-family: $mainFontFamily;
+    &.menu-open{
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: $containerSize;
+    padding: 0 $gutterGap;
+    margin: 0 auto;
+    width: 100%;
+}

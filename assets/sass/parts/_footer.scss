@@ -1,0 +1,44 @@
+@use '../abstaract'as *;
+
+.footer {
+    border-top: 2px solid $factsBorderColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+
+    @include big-tablet {
+        width: 100%;
+    }
+
+    @include smartphone {
+        width: 100%;
+    }
+
+    &__social-links {
+        @include resetList;
+        display: flex;
+        gap: 30px;
+        font-size: 13px;
+
+        li {
+            transition: 300ms;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            a {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__copyrights {
+        font-size: 13px;
+    }
+
+}

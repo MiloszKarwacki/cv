@@ -1,0 +1,56 @@
+@use '../abstaract'as *;
+
+.facts {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -$gutterGap
+    }
+
+    &__item {
+        padding: 0 $gutterGap;
+        width: 25%;
+        margin: 0 0 2*$gutterGap 0;
+
+        @include big-tablet {
+            width: 50%;
+        }
+
+        @include smartphone {
+            width: 100%;
+        }
+
+    }
+
+    &__itemBg {
+        background-color: $factsBgColor;
+        padding: 30px;
+        border: 2px solid $factsBorderColor;
+        border-radius: 30px;
+        text-align: center;
+        height: 100%;
+        transition: 300ms;
+        box-shadow: 0 12px 17px rgba(0, 0, 0, .12);
+
+        &:hover {
+            translate: 0 -20px;
+        }
+    }
+
+    &__itemIcon {
+        color: $secondaryColor;
+        font-size: 40px;
+        margin: 0 0 20px 0;
+    }
+
+    &__itemTitle {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+    }
+
+    &__itemNumber {
+        @include fluid-type(20px, 40px);
+        margin: 0;
+    }
+}

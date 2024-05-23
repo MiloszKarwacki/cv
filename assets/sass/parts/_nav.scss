@@ -1,0 +1,121 @@
+@use '../abstaract'as *;
+
+.nav {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @include big-tablet {
+        padding: 15px;
+    }
+
+    &--open {
+        .nav__menu {
+            visibility: visible;
+            flex-direction: column;
+            position: fixed;
+            z-index: 2;
+            background-color: $bodyBgColor;
+            height: calc(100% - 80px);
+            width: 100%;
+            inset: 80px auto auto 0;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav__menuLink {
+            font-size: 16px;
+        }
+
+        .nav__menuItem {
+            opacity: 1;
+            transition: 300ms;
+
+            &:nth-child(1) {
+                transition-delay: 300ms;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 400ms;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 500ms;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 600ms;
+            }
+
+            &:nth-child(5) {
+                transition-delay: 700ms;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__symbol {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: $thirdColor;
+        background-color: $secondaryColor;
+        font-size: 24px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
+    }
+
+    &__name {
+        color: $thirdColor;
+        font-size: 18px;
+    }
+
+    &__menu {
+        @include resetList;
+        display: flex;
+        gap: 45px;
+
+        @include big-tablet {
+            position: fixed;
+            z-index: -22;
+            visibility: hidden;
+        }
+    }
+
+    &__menuItem {
+        @include big-tablet {
+            opacity: 0;
+        }
+    }
+
+    &__menuLink {
+        color: $navigationLinkColor;
+        opacity: 0.55;
+        transition: 300ms;
+        font-size: 14px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+
+    .hamburger {
+        display: none;
+
+        @include big-tablet {
+            display: block;
+        }
+    }
+}

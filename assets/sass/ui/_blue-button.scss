@@ -1,0 +1,15 @@
+@use '../abstaract'as *;
+
+.blue-button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 2px solid $secondaryColor;
+    background-color: $factsBgColor;
+    color: $thirdColor;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .78);
+    transition: 300ms;
+
+    &:hover {
+        background-color: $secondaryColor;
+    }
+}
